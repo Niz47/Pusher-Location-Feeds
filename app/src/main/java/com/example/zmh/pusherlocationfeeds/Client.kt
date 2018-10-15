@@ -2,13 +2,15 @@ package com.example.zmh.pusherlocationfeeds
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 
 class Client {
     fun getClient(): Service {
         val httpClient = OkHttpClient.Builder()
 
         val builder = Retrofit.Builder()
-                .baseUrl("your_server_url")
+                .baseUrl("https://wt-25e341bb2fca3ab10c862fb71cda965c-0.run.webtask.io/pusher-location-feeds/")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
 

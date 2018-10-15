@@ -10,7 +10,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         enterButton.setOnClickListener {
             if (userName.text.isNotEmpty()){
                 val intent = Intent(this@LoginActivity,MainActivity::class.java)
